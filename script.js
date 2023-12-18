@@ -45,3 +45,23 @@
 
 
 //END OF ASSIGNMENT
+
+// 1. creating a function getCatFacts() that takes the number as parameter
+
+async function getCatFacts(num1) {
+
+    // 2 && 3 fetch the API using the modified Endpoint
+    let promise = await fetch(`https://catfact.ninja/facts?limit={num1}`)
+
+    // 4. Using the async/await approach to convert the responce to json
+    .then((response) => response.json())
+
+    //catch any errors and handle it appropriately
+    .catch((e) => {
+        console.log(e);
+    });
+
+    //return the facts in the awaited fetch if ll is good
+    return promise;
+
+}
