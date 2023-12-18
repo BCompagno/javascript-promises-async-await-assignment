@@ -61,7 +61,7 @@ async function getCatFacts(num1) {
         console.log(e);
     });
 
-    //return the facts in the awaited fetch if ll is good
+    //return the facts in the awaited fetch if all is good
     return promise;
 
 }
