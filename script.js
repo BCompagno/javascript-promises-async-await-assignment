@@ -51,7 +51,7 @@
 async function getCatFacts(num1) {
 
     // 2 && 3 fetch the API using the modified Endpoint
-    let promise = await fetch(`https://catfact.ninja/facts?limit={num1}`)
+    let promise = await fetch(`https://catfact.ninja/facts?limit=${num1}`)
 
     // 4. Using the async/await approach to convert the responce to json
     .then((response) => response.json())
